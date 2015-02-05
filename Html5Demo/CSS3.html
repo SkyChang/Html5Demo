@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        #rounded {
+            border: 2px solid #a1a1a1;
+            padding: 10px 40px;
+            background: #dddddd;
+            width: 300px;
+            border-radius: 25px;
+        }
+
+        #shadow {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        #linearGradient  {
+            height: 200px;
+            background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(red, blue); /* Standard syntax (must be last) */
+        }
+
+        #fontShadow {
+            text-shadow: 5px 5px 5px #FF0000;
+        
+        }
+
+        #fontWrap {
+            width: 11em; 
+            border: 1px solid #000000;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word
+            
+        }
+
+        
+        .d {
+            width: 100px;
+            height: 75px;
+            background-color: red;
+            border: 1px solid black;
+        }
+        /*transform*/
+        
+        #div2 {
+            -ms-transform: translate(50px,100px);
+            -webkit-transform: translate(50px,100px);
+            -moz-transform:translate(50px,100px);
+            -o-transform:translate(50px,100px);
+            transform: translate(50px,100px);
+        }
+
+
+        /*rotate*/
+        
+        /*#div2 {
+            -ms-transform: rotate(30deg);
+            -moz-transform: rotate(30deg);
+            -o-transform: rotate(30deg);
+            -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+        }*/
+
+        /*#div2 {
+            margin: 100px;
+            -ms-transform: scale(2,4); 
+            -webkit-transform: scale(2,4); 
+            -o-transform: scale(2,4);
+            -moz-transform: scale(2,4);
+            transform: scale(2,4);
+        }*/
+
+        /*skew*/
+        /*#div2 {
+            -ms-transform: skew(30deg,20deg);
+            -webkit-transform: skew(30deg,20deg);
+            transform: skew(30deg,20deg);
+        }*/
+
+        /*matrix*/
+        /*#div2 {
+            -ms-transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+            -webkit-transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+            transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+        }*/
+
+        /*3D*/
+        /*#div2 {
+            -webkit-transform: rotateY(130deg);
+            transform: rotateY(130deg);
+        }*/
+
+
+        #effect {
+            width: 100px;
+            height: 100px;
+            background: red;
+            -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+            transition: width 2s, height 2s, transform 2s;
+        }
+
+        #effect:hover {
+            width: 200px;
+            height: 200px;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        #animations {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */
+            animation: myfirst 5s;
+        }
+
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes myfirst {
+            0%   {background:red; left:0px; top:0px;}
+            25%  {background:yellow; left:200px; top:0px;}
+            50%  {background:blue; left:200px; top:200px;}
+            75%  {background:green; left:0px; top:200px;}
+            100% {background:red; left:0px; top:0px;}
+        }
+
+        /* Standard syntax */
+        @keyframes myfirst {
+            0%   {background:red; left:0px; top:0px;}
+            25%  {background:yellow; left:200px; top:0px;}
+            50%  {background:blue; left:200px; top:200px;}
+            75%  {background:green; left:0px; top:200px;}
+            100% {background:red; left:0px; top:0px;}
+        }
+
+        .newspaper {
+            -webkit-column-count: 3; /* Chrome, Safari, Opera */
+            -moz-column-count: 3; /* Firefox */
+            column-count: 3;
+        }
+    </style>
+</head>
+<body>
+    <div id="rounded">圓角</div>
+
+    <br/>
+
+    <div id="shadow">陰影</div>
+
+    <br/>
+
+    <div id="linearGradient"></div>
+
+    <br/>
+
+    <p id="fontShadow">文字效果</p>
+
+    <br/>
+
+    <p id="fontWrap">測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試</p>
+
+    <br/>
+
+    <!--translate-->
+    <div class="d">Hello. This is a DIV element.</div>
+
+    <div id="div2" class="d">Hello. This is a DIV element.</div>
+
+    <!--效果-->
+    <div id="effect">Hover over me to see the transition effect!</div>
+
+    <!--動畫-->
+    <div id="animations">Animations!</div>
+    
+    <div class="newspaper">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+    </div>
+</body>
+</html>
